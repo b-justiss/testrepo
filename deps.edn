@@ -1,0 +1,6 @@
+{:paths ["src"]
+ :deps {org.clojure/clojure {:mvn/version "1.12.0"}}
+ :aliases
+ {:test
+  {:extra-paths ["test"]
+   :main-opts ["-e" "(require 'clojure.test 'names.core-test) (let [{:keys [fail error]} (clojure.test/run-tests 'names.core-test)] (System/exit (if (zero? (+ fail error)) 0 1)))"]}}}
